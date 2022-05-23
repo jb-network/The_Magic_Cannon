@@ -15,6 +15,7 @@ Console.ReadKey();
 Console.Clear();
 Console.WriteLine("Firing 100 simulation rounds!");
 
+//Firing sequence loop
 for (int fireRound = 1; fireRound <= 100; fireRound++)
 {
     string roundType;
@@ -46,6 +47,7 @@ for (int fireRound = 1; fireRound <= 100; fireRound++)
     Console.WriteLine($"Firing Round {fireRound}: Round Type Generated: {roundType}");
 }
 
+// Restore console color to default and end simulation
 Console.ResetColor();
 Console.WriteLine("Press any key to end the simulation");
 Console.ReadKey();
