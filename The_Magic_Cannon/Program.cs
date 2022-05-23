@@ -15,6 +15,37 @@ Console.ReadKey();
 Console.Clear();
 Console.WriteLine("Firing 100 simulation rounds!");
 
+for (int fireRound = 1; fireRound <= 100; fireRound++)
+{
+    string roundType;
+
+    if (fireRound % 3 == 0 && fireRound % 5 == 0)
+    {
+        roundType = "Combo Fire & Electric";
+        Console.ForegroundColor = ConsoleColor.Blue;
+
+    }
+    else if (fireRound % 3 == 0)
+    {
+        roundType = "Fire";
+        Console.ForegroundColor = ConsoleColor.Red;
+    }
+    else if (fireRound % 5 == 0)
+    {
+        roundType = "Electric";
+        Console.ForegroundColor = ConsoleColor.Yellow;
+    }
+    else
+    {
+        roundType = "Normal";
+        Console.ForegroundColor = ConsoleColor.White;
+    }
+    Console.WriteLine($"Firing Round {fireRound}: Round Type Generated: {roundType}");
+}
+
+Console.ResetColor();
+Console.WriteLine("Press any key to end the simulation");
+Console.ReadKey();
 
 
 
